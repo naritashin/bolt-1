@@ -25,7 +25,7 @@
 
 .cf {
   &::before, &::after {
-  display: block;
+    display: block;
     clear: both;
     content: "";
   }
