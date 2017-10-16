@@ -1,0 +1,30 @@
+
+@mixin fixedTop() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@mixin setSection($top, $bottom, $color) {
+  background-color: $color;
+  padding: {
+    top: $top;
+    bottom: $bottom;
+  }
+}
+
+@mixin link($fontSize, $color) {
+  display: block;
+  text-decoration: none;
+  color: $color;
+  font: {
+    size: $fontSize;
+  }
+}
+
+@mixin setWidth($maxWidth) {
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}

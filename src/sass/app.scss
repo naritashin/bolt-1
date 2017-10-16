@@ -1,0 +1,408 @@
+@import'./variable';
+@import './functions';
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0;
+}
+
+.lato {
+  font-family: "Lato";
+}
+
+.raleway {
+  font-family: "Raleway";
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cf {
+  &::before, &::after {
+  display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.fa {
+  &-bolt {
+    font-size: 60px;
+    color: #7a7a7a;
+  }
+
+  &-heart {
+    color: #fff;
+  }
+}
+
+.header {
+  @include fixedTop();
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+
+  &__nav {
+    @include setWidth($maxWidth);
+  }
+
+  &__btn {
+    display: none;
+    padding: 10px;
+    margin: {
+      top: 8px;
+    }
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+
+    &__bar {
+      display: block;
+      width: 22px;
+      border: 1px solid $headerBarColor;
+
+      &:not(:first-child) {
+        margin: {
+          top: 4px;
+        }
+      }
+    }
+  }
+
+  &__menu {
+
+    & > li {
+      background-color: $brandColor;
+    }
+
+    &__link {
+      @include link(12px, #fff);
+      padding: 14px 12px;
+    }
+  }
+
+  @media (max-width: 766px) {
+    &__menu {
+      display: none;
+      float: none;
+      clear: both;
+      width: 100%;
+      padding: 14px 0;
+
+      &__link {
+        text-align: left;
+      }
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+}
+
+.brand {
+@include setSection(340px, 250px, $bgColor);// pad top bottom bgcolor
+
+  &__ttl {
+    color: $brandColor;
+    letter-spacing: 3px;
+    font: {
+      size: 90px;
+      weight: 700;
+    }
+  }
+
+  &__subttl {
+    padding-top: 20px;
+    color: $subTtlColor;
+    font: {
+      size: 30px;
+      weight: 300;
+    }
+  }
+
+  @media (max-width: 766px) {
+    @include setSection(250px, 130px, $bgColor);
+
+    &__ttl {
+      font: {
+        size: 80px;
+      }
+    }
+  }
+}
+
+.what {
+@include setSection(50px, 0, $brandColor);
+  color: #fff;
+
+  &__wrapper {
+    @include setWidth($maxWidth);
+  }
+
+  &__img {
+    display: inline-block;
+    width: 457px;
+  }
+
+  &__inner {
+    width: 647px;
+    margin: {
+      top: 20px;
+      left: 32px;
+    }
+  }
+
+  &__ttl {
+    font: {
+      size: $ttlFontSize;
+      weight: 300;
+    }
+  }
+
+  &__content {
+    margin-top: 35px;
+    color: #fff;
+    line-height: 1.4;
+    font: {
+      size: $txtFontSize;
+      weight: 200;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    @include setSection(50px, 25px, $brandColor);
+
+    &__wrapper {
+      @include setWidth(100%);
+      padding: 0 15px;
+    }
+
+    &__img {
+      display: block;
+      float: none;
+      margin: 0 auto;
+    }
+
+    &__inner {
+      @include setWidth(100%);
+      float: none;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+.work {
+@include setSection(60px, 70px, $bgColor);
+
+  &__ttl {
+    @extend .what__ttl;
+  }
+
+  &__list {
+      @include setWidth(1100px);
+    margin: 40px auto;
+
+    & > li {
+      display: inline-block;
+      margin: {
+        left: 100px;
+      }
+
+      &:first-child {
+        margin: {
+          left: 0;
+        }
+      }
+
+      &:nth-child(4) {
+        margin: {
+          top: 80px;
+          left: 0;
+        }
+      }
+    }
+
+    &__img {
+      opacity: .7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__inner {
+      @include setWidth(946px);
+    margin: 90px auto 0;
+    text-align: left;
+
+    &__content {
+  @extend .what__content;
+  @include setWidth(635px);
+      margin: 0;
+      color: $textColor;
+      letter-spacing: 1px;
+    }
+
+    &__mail {
+      background-color: $brandColor;
+      margin: {
+        left:90px;
+      }
+
+      &__btn {
+      @include link(12px, #fff);
+      padding: 14px 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__list {
+      @include setWidth(100%);
+      margin: 40px auto 0;
+
+      & > li {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &__inner {
+      width: 100%;
+      margin: 80px auto 0;
+      padding: 0 15px;
+
+      &__content {
+        float: none;
+        width: 100%;
+        margin: 80px auto 0;
+      }
+
+      &__mail {
+        float: none;
+        display: block;
+        width: 98px;
+        margin: 40px auto 0;
+      }
+    }
+  }
+}
+
+.skill {
+@include setSection(70px, 100px, #4e4e4e);
+
+  &__ttl {
+    @extend .what__ttl;
+    color: #fff;
+  }
+
+  &__list {
+    width: 1030px;
+    margin: 50px auto 0;
+
+    & > li {
+      display: inline-block;
+      margin: {
+        left: 180px;
+      }
+
+      &:first-child {
+        margin: {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__name {
+    @extend .what__ttl;
+    color: #fff;
+    margin: {
+      top: 16px;
+    }
+    font: {
+      size: 16px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+
+    &__list {
+      width: 100%;
+
+      & > li {
+        display: block;
+        margin: 88px auto 0;
+
+        &:first-child {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.sosial {
+@include setSection(200px, 200px, $bgColor);
+
+  &__list {
+    width: 740px;
+    margin: 0 auto;
+
+    & > li {
+      display: inline-block;
+    }
+
+    &__item {
+      @include link(50px, $brandColor);
+      width: 185px;
+      padding: 30px;
+      line-height: 50px;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 766px) {
+    padding: 50px 15px;
+
+    &__list {
+      width: 100%;
+
+      & > li {
+        display: block;
+      }
+
+      &__item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $brandColor;
+  padding: 20px 15px 25px;
+
+  &__author {
+    @include setWidth($maxWidth);
+    color: #fff;
+    text-align: right;
+  }
+}
+
+.is-active {
+  display: block;
+}

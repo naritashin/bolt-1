@@ -1,18 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>Bolt - Free Bootstrap 3 Theme</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="This is my portfolio site">
+  <meta name="keyword" content="bolt, bootstrap, portfolio">
+  <title>Bolt - Free Bootstrap 3 Theme</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
+  <header class="header">
+    <nav class="header__nav cf">
+      <p class="fl">
+        <a class="header__logo fa fa-bolt fa-gray"></a>
+      </p>
+      <button class="header__btn js-menu-btn fr">
+        <span class="header__btn__bar"></span>
+        <span class="header__btn__bar"></span>
+        <span class="header__btn__bar"></span>
+      </button>
+      <ul class="header__menu js-menu fr">
+        <li>
+          <a href="" class="header__menu__link lato">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="brand raleway">
+      <h1 class="brand__ttl">Bolt Theme</h1>
+      <p class="brand__subttl">FREE BOOTSTRAP THEMES</p>
+    </section>
+    <article class="what cf">
+      <div class="what__wrapper">
+        <figure class="what__img fl"><img src="./img/iphone.png" alt="phone"></figure>
+        <section class="what__inner fl">
+          <h2 class="what__ttl raleway">WHAT WE CAN DO?</h2>
+          <p class="what__content lato">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </section>
+      </div>
+    </article>
+    <article class="work">
+      <h2 class="work__ttl raleway">OUR LATEST WORK</h2>
+      <ul class="work__list">
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/01.jpg" alt="work01" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/02.jpg" alt="work02" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/03.jpg" alt="work03" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/04.jpg" alt="work04" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/05.jpg" alt="work05" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="">
+              <img src="./img/06.jpg" alt="work06" class="work__list__img">
+            </a>
+          </figure>
+        </li>
+      </ul>
+      <section class="work__inner cf">
+        <p class="work__inner__content fl lato">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+        <p class="work__inner__mail fl">
+          <a href="" class="work__inner__mail__btn">Email Me!</a>
+        </p>
+      </section>
+    </article>
+    <section class="skill">
+      <h2 class="skill__ttl raleway">OUR SKILLS</h2>
+      <ul class="skill__list lato">
+        <li>
+          <figure class="skill__img"><img src="./img/circle_01.png" alt="JavaScript"></figure>
+          <p class="skill__name">JavaScript</p>
+        </li>
+        <li>
+          <figure class="skill__img"><img src="./img/circle_02.png" alt="Bootstrap"></figure>
+          <p class="skill__name">Bootstrap</p>
+        </li>
+        <li>
+          <figure class="skill__img"><img src="./img/circle_03.png" alt="WordPress"></figure>
+          <p class="skill__name">WordPress</p>
+        </li>
+        <li>
+          <figure class="skill__img"><img src="./img/circle_04.png" alt="PhotoShop"></figure>
+          <p class="skill__name">PhotoShop</p>
+        </li>
+      </ul>
+    </section>
+    <section class="sosial">
+      <ul class="sosial__list">
+        <li><a href="" class="sosial__list__item fa fa-facebook"></a></li>
+        <li><a href="" class="sosial__list__item fa fa-dribbble"></a></li>
+        <li><a href="" class="sosial__list__item fa fa-twitter"></a></li>
+        <li><a href="" class="sosial__list__item fa fa-envelope"></a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer cf">
+    <p class="footer__author lato">Crafted with <span class="fa fa-heart"></span> by BlackTie.co.</p>
+  </footer>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
